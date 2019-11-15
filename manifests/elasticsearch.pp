@@ -5,4 +5,13 @@
 # @example
 #   include elk_stack_profile::elasticsearch
 class elk_stack_profile::elasticsearch {
+
+  include java
+
+  class { 'elasticsearch':
+      version =>  '6.8.4'
+  }
+
+  elasticsearch::instance { 'es-01': }
+
 }

@@ -5,4 +5,10 @@
 # @example
 #   include elk_stack_profile::kibana
 class elk_stack_profile::kibana {
+
+  class { 'kibana':
+    config => { "server.port" => '8080'},
+    ensure => '6.8.4',
+  }
+
 }
